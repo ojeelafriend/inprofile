@@ -1,0 +1,25 @@
+{
+	"name": "inprofile",
+	"version": "0.1.0",
+	"description": "Web Application",
+	"main": "server.js",
+	"scripts": {
+		"dev": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ojeelafriend/inprofile.git"
+	},
+	"author": "phranb, ssteff, alexis, nahuel, negro, ojeel",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ojeelafriend/inprofile/issues"
+	},
+	"homepage": "https://github.com/ojeelafriend/inprofile#readme",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	}
+}
