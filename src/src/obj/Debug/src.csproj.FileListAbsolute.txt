@@ -1,2 +1,0 @@
-E:\OneDrive\Escritorio\Proyecto\inprofile\src\src\obj\Debug\src.csprojAssemblyReference.cache
-E:\OneDrive\Escritorio\Proyecto\inprofile\src\src\obj\Debug\src.csproj.CoreCompileInputs.cache

@@ -11,23 +11,20 @@ function packageHandling(user, password) {
 				create: new Date(),
 			},
 		};
-
-		resolve(allUserData);
-		$.ajax({
-			method: 'POST',
-			url: '../../src/src/WebForm1.aspx/Login',
-			data: JSON.stringify(objUsuario),
-			contentType: 'application/json; charset=utf-8',
-			dataType: 'json',
-		})
-			.done((details) => {
-				console.log(details);
-			})
-			.catch((e) => {
-				console.error('error ajax: ', e);
+		
+			const ffi = require('ffi-napi');
+			const mathLibrary  = new ffi.Library('../../Source/Debug/x64/Users', {
+				"AddUser": [
+						"string", ["string", "string", "string"]
+			],
 			});
+			console.log(mathLibrary.AddUser("datos", "datos", "datos"));
+
+			
+
 	});
-}
+
+	
 module.exports = {
 	package: packageHandling,
 };
