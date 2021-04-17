@@ -1,16 +1,27 @@
+const sendJson = require('../sendpackage/controller');
 function packageHandling(user, password) {
 	return new Promise((resolve, reject) => {
 		if (!user || !password) {
-			reject('[messageController] Invalid data');
+			reject('[userController] Invalid data');
 		}
 
 		const allUserData = {
-			user: user,
-			pass: password,
+			username: user,
+			password: password,
 			create: new Date(),
 		};
-		resolve('Send package');
-		console.log(allUserData);
+
+		resolve(() => {
+			sendJson
+				.push(allUserData)
+				.then(() => {
+					console.log('[Success] SEND JSON!');
+				})
+				.catch((e) => {
+					console.error(e);
+				});
+			console.log(allUserData);
+		});
 	});
 }
 module.exports = {
