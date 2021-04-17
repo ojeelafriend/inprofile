@@ -1,4 +1,3 @@
-const sendJson = require('../sendpackage/controller');
 function packageHandling(user, password) {
 	return new Promise((resolve, reject) => {
 		if (!user || !password) {
@@ -6,22 +5,27 @@ function packageHandling(user, password) {
 		}
 
 		const allUserData = {
-			username: user,
-			password: password,
-			create: new Date(),
+			objUsuario: {
+				username: user,
+				password: password,
+				create: new Date(),
+			},
 		};
 
-		resolve(() => {
-			sendJson
-				.push(allUserData)
-				.then(() => {
-					console.log('[Success] SEND JSON!');
-				})
-				.catch((e) => {
-					console.error(e);
-				});
-			console.log(allUserData);
-		});
+		resolve(allUserData);
+		$.ajax({
+			method: 'POST',
+			url: '../../src/src/WebForm1.aspx/Login',
+			data: JSON.stringify(objUsuario),
+			contentType: 'application/json; charset=utf-8',
+			dataType: 'json',
+		})
+			.done((details) => {
+				console.log(details);
+			})
+			.catch((e) => {
+				console.error('error ajax: ', e);
+			});
 	});
 }
 module.exports = {
