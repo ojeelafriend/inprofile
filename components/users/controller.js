@@ -10,9 +10,20 @@ function packageHandling(user, password) {
 			password: password,
 			create: new Date(),
 		};
-		console.log(allUserData);
+		
+			const ffi = require('ffi-napi');
+			const mathLibrary  = new ffi.Library('../../Source/Debug/x64/Users', {
+				"AddUser": [
+						"string", ["string", "string", "string"]
+			],
+			});
+			console.log(mathLibrary.AddUser("datos", "datos", "datos"));
+
+			
+
 	});
-}
+
+	
 module.exports = {
 	package: packageHandling,
 };
