@@ -3,29 +3,14 @@ function packageHandling(user, password) {
 		if (!user || !password) {
 			reject('[userController] Invalid data');
 		}
+		resolve('Ok, package armed');
 
-		const allUserData = {
-			objUsuario: {
-				username: user,
-				password: password,
-				create: new Date(),
-			},
+		var allUserData = {
+			username: user,
+			password: password,
+			create: new Date(),
 		};
-
-		resolve(allUserData);
-		$.ajax({
-			method: 'POST',
-			url: '../../src/src/WebForm1.aspx/Login',
-			data: JSON.stringify(objUsuario),
-			contentType: 'application/json; charset=utf-8',
-			dataType: 'json',
-		})
-			.done((details) => {
-				console.log(details);
-			})
-			.catch((e) => {
-				console.error('error ajax: ', e);
-			});
+		console.log(allUserData);
 	});
 }
 module.exports = {
