@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Imaro\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Imaro\\.nuget\\packages"
+    ]
+  }
+}

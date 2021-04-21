@@ -1,20 +1,17 @@
-const ffi_exports = require('ffi-napi');
+const manager = require('./manager');
 
-function packageHandling(user, password) {
+function registerUser(user, password) {
 	return new Promise((resolve, reject) => {
 		if (!user || !password) {
 			reject('[userController] Invalid data');
+		} else {
+			resolve('[userController] Ok, in process...');
+			const create = new Date();
+			manager.register(user, password, create);
 		}
-		resolve('Ok, package armed');
-		const create = new Date();
-		const mathLibrary = new ffi_exports.Library('../../Source/Users/bin/Debug/x64/Users.dll', {
-			AddUser: ['string', ['string', 'string', 'string']],
-		});
-		const details = mathLibrary.AddUser(`${user}`, `${password}`, `${create}`);
-		console.log(details);
 	});
 }
 
 module.exports = {
-	package: packageHandling,
+	register: registerUser,
 };

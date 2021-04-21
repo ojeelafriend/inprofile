@@ -5,7 +5,7 @@ const talk = require('../../network/response');
 
 router.post('/', (req, res) => {
 	controller
-		.package(req.body.user, req.body.password)
+		.register(req.body.user, req.body.password)
 		.then((notice) => {
 			talk.success(req, res, notice, 201);
 		})

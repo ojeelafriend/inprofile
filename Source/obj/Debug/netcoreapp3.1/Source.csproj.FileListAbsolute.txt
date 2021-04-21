@@ -1,0 +1,13 @@
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\bin\Debug\netcoreapp3.1\Source.exe
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\bin\Debug\netcoreapp3.1\Source.deps.json
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\bin\Debug\netcoreapp3.1\Source.runtimeconfig.json
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\bin\Debug\netcoreapp3.1\Source.runtimeconfig.dev.json
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\bin\Debug\netcoreapp3.1\Source.dll
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\bin\Debug\netcoreapp3.1\Source.pdb
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.csprojAssemblyReference.cache
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.AssemblyInfoInputs.cache
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.AssemblyInfo.cs
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.csproj.CoreCompileInputs.cache
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.dll
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.pdb
+E:\OneDrive\Escritorio\Proyecto\inprofile\Source\Source\obj\Debug\netcoreapp3.1\Source.genruntimeconfig.cache
