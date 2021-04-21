@@ -29,15 +29,22 @@ namespace Source
                     string datos = Encoding.UTF8.GetString(buffer);
                     string[] LISTA = datos.Split(',');
 
+
+                    Console.WriteLine(LISTA[0] + LISTA[1] + LISTA[2] + LISTA[3]);
+                    Console.WriteLine(datos);
+
                     switch (LISTA[3])
                     {
                         case "add":
+
                             string register = RegisterUser(LISTA[0], LISTA[1], LISTA[2]);
+                            Console.WriteLine("SE USO EL ADD - " + register);
                             buffer = Encoding.UTF8.GetBytes(register);
                             client.Send(buffer, 0, buffer.Length, 0);
                             break;
                         case "check":
                             string login = UserLogin(LISTA[0], LISTA[1]);
+                            Console.WriteLine("SE USO EL CHECK - " + login);
                             buffer = Encoding.UTF8.GetBytes(login);
                             client.Send(buffer, 0, buffer.Length, 0);
                             break;
