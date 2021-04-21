@@ -36,6 +36,7 @@ namespace Source
                     switch (LISTA[3])
                     {
                         case "add":
+
                             string register = RegisterUser(LISTA[0], LISTA[1], LISTA[2]);
                             Console.WriteLine("SE USO EL ADD - " + register);
                             buffer = Encoding.UTF8.GetBytes(register);
