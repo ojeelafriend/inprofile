@@ -14,4 +14,15 @@ router.post('/', (req, res) => {
 		});
 });
 
+router.get('/', (req, res) => {
+	controller
+		.auth(req.body.user, req.body.password)
+		.then((notice) => {
+			talk.success(req, res, notice, 200);
+		})
+		.catch((e) => {
+			talk.errors(req, res, 'Error data', 406, e);
+		});
+});
+
 module.exports = router;
